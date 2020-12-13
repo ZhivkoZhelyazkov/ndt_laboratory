@@ -1,0 +1,19 @@
+.list-tests .list-item {
+    width: 30%;
+    border: 3px solid rgb(200, 200, 200);
+    margin-right: 10px;
+}
+
+.test-details {
+    padding: 15px;
+}
+
+.test-info {
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.test-info,
+.test-description {
+    margin-top: 10px;
+}

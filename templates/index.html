@@ -1,0 +1,68 @@
+{% extends 'shared/site.html' %}  {# index.html inherits site.html #}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block site_title %}
+    NDT of Building Structures
+{% endblock %}
+
+{% block site_content %}
+    <section class="banner">
+        <header>
+            <h1>Non-Destructive Testing of Building Structures</h1>
+            <h2>Test methods you can order</h2>
+        </header>
+
+        <div class="row">
+            <div class="col">
+                Already have an account?
+                <a href="#" class="button">Sign in</a>
+            </div>
+            <div class="col">
+                Do not have an account?
+                <a href="#" class="button">Sign up</a>
+            </div>
+        </div>
+
+    </section>
+{% endblock %}
+
+
+{#    <nav class="topmenu">#}
+{#        <ul>#}
+{#            <li><a href="#">Home Page</a></li>#}
+{#            <li><a href="about.html" target="_blank">About Page</a></li>#}
+{#        </ul>#}
+{#    </nav>#}
+{##}
+{#    <main class="site-content">#}
+{#        <section>#}
+{#            <p>The Manta Ray</p>#}
+{#            <figure>#}
+{#                <img src="https://i.pinimg.com/564x/8c/ca/e4/8ccae499c4741ce53a9eca0dfdee81d1.jpg" alt="Manta image">#}
+{#                <figcaption>Fig.1 - A flying manta ray.</figcaption>#}
+{#            </figure>#}
+{#        </section>#}
+{##}
+{#        <details>#}
+{#            <summary>Some details</summary>#}
+{#            <p><a href="https://en.wikipedia.org/wiki/Manta_ray" target="_blank">More info about Manta rays.</a></p>#}
+{#            <p>More info about Merlins.</p>#}
+{#        </details>#}
+{#    </main>#}
+{##}
+{#    <footer class=site-footer>#}
+{#        <address>#}
+{#            Street Address: Todor Dzhaabarov str.<br/>#}
+{#            District: Manastirski Livadi<br/>#}
+{#            City: Sofia<br/>#}
+{#            Country: Bulgaria<br/>#}
+{#            Tel: +359 899 888 508#}
+{#        </address>#}
+{##}
+{#        <p>All Rights Reserved &copy; &ZHcy;-Solutions</p>#}
+{#    </footer>#}
+

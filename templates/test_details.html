@@ -1,0 +1,25 @@
+{% extends 'shared/site.html' %}
+{% load static %}
+
+{% block styles %}
+    <link  rel="stylesheet" href="{% static 'css/details-test.css' %}">
+{% endblock %}
+
+{% block site_content%}
+    <div class="test-image">
+        <img src="{{ test.image_url }}" alt="image of {{ test.title }}">
+    </div>
+    <div class="test-info">
+        <ul class="list-test-details list-horizontal">
+            <li class="list-item"><span class="underline">Test:</span> {{ test.title }}</li>
+            <li class="list-item"><span class="underline">Standard:</span> {{ test.standard }}</li>
+        </ul>
+        <p>Description: {{ test.description }}</p>
+
+        <div class="test-buttons">
+            {#    <a class="button button-blue" href="{% url 'order test' test.id %}">Order</a>#}
+            <a href="{% url 'order test' test.id %}"><i class="far fa-heart"></i></a>
+        </div>
+        Ordered: {{ test.order_set.count }}
+    </div>
+{% endblock %}

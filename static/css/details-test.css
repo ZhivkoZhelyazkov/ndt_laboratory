@@ -1,0 +1,22 @@
+.test-image,
+.test-info {
+    padding: 15px;
+    display: inline-block;
+}
+
+.test-image {
+    width: 33%;
+}
+
+.test-info {
+    width: 66%;
+    vertical-align: top;
+}
+
+.list-test-details {
+    font-weight: 600;
+}
+
+.list-test-details .list-item {
+    width: 49%;
+}
