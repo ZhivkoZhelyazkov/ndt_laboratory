@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'ndt_laboratory.ndts',
+    'ndt_laboratory.accounts',
 
     'django.contrib.admin',
     'django.contrib.auth',
