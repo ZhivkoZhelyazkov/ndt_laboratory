@@ -805,7 +805,7 @@ false Zulu
     <database id="6" parent="1" name="ndt_lab_db">
       <ObjectId>172792</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>3957</IntrospectionStateNumber>
+      <IntrospectionStateNumber>3975</IntrospectionStateNumber>
       <Relations>sequence|table|172793|172795|1
 sequence|table|172804|172806|1
 sequence|table|172814|172816|1
@@ -915,7 +915,7 @@ UC/10
 </Acl>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>3958</IntrospectionStateNumber>
+      <IntrospectionStateNumber>3976</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="27" parent="6" name="plpgsql">
@@ -1293,7 +1293,7 @@ UC/10
     <table id="81" parent="26" name="ndts_ndt">
       <ObjectId>181001</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3950</StateNumber>
+      <StateNumber>3968</StateNumber>
     </table>
     <column id="82" parent="68" name="id">
       <Position>1</Position>
@@ -2406,10 +2406,10 @@ model</ColNames>
       <TypeId>1043</TypeId>
     </column>
     <column id="217" parent="81" name="user_id">
-      <Position>7</Position>
+      <Position>8</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>3950</StateNumber>
+      <StateNumber>3968</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="218" parent="81" name="ndts_ndt_pkey">
@@ -2423,8 +2423,8 @@ model</ColNames>
       <ClassIds>1978</ClassIds>
     </index>
     <index id="219" parent="81" name="ndts_ndt_user_id_9dc833e3">
-      <ObjectId>181034</ObjectId>
-      <StateNumber>3950</StateNumber>
+      <ObjectId>189188</ObjectId>
+      <StateNumber>3968</StateNumber>
       <ColNames>user_id</ColNames>
       <AccessMethodId>403</AccessMethodId>
       <CollationIds>0</CollationIds>
@@ -2438,8 +2438,8 @@ model</ColNames>
       <UnderlyingIndexName>ndts_ndt_pkey</UnderlyingIndexName>
     </key>
     <foreign-key id="221" parent="81" name="ndts_ndt_user_id_9dc833e3_fk_accounts_userprofile_id">
-      <ObjectId>181029</ObjectId>
-      <StateNumber>3950</StateNumber>
+      <ObjectId>189183</ObjectId>
+      <StateNumber>3968</StateNumber>
       <ColNames>user_id</ColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
