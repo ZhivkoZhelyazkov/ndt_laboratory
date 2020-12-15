@@ -13,6 +13,8 @@ from os.path import join
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from django.urls import reverse_lazy
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -32,7 +34,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'ndt_laboratory.ndts',
-    'ndt_laboratory.accounts',
+    'ndt_laboratory.authentication',
     'ndt_laboratory.common',
 
     'django.contrib.admin',
@@ -141,3 +143,6 @@ STATICFILES_DIRS = (
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = join(BASE_DIR, 'media')
+
+
+LOGIN_REDIRECT_URL = reverse_lazy('index')

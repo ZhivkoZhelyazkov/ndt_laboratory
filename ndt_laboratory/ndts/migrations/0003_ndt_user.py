@@ -7,7 +7,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('accounts', '0001_initial'),
+        ('authentication', '0001_initial'),
         ('ndts', '0002_remove_ndt_user'),
     ]
 
@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='ndt',
             name='user',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='accounts.userprofile'),
+            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='authentication.userprofile'),
             preserve_default=False,
         ),
     ]

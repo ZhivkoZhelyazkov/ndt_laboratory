@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-# from ndt_laboratory.accounts.models import UserProfile
+# from ndt_laboratory.authentication.models import UserProfile
 from django.utils.text import slugify
 
 UserModel = get_user_model()
