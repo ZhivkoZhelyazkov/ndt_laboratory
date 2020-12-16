@@ -11,7 +11,7 @@
     <ul class="list-horizontal list-tests">
         {% for ndt in ndt_list %}
             <li class="list-item">
-                <img src="{{ ndt.image }}" alt="image of {{ ndt.name }}"/>
+                <img src="{{ ndt.image.url }}" alt="image of {{ ndt.name }}"/>
                 <div class="test-details">
                     <p class="test-info">{{ ndt.name }} {{ ndt.standard }}</p>
                     <p class="test-description">{{ ndt.description }}</p>

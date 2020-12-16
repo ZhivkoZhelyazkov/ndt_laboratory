@@ -33,16 +33,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'ndt_laboratory.ndts',
-    'ndt_laboratory.authentication',
-    'ndt_laboratory.common',
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'ndt_laboratory.ndts',
+    'ndt_laboratory.authentication',
+    'ndt_laboratory.common',
 ]
 
 MIDDLEWARE = [

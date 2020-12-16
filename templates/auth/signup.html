@@ -1,9 +1,9 @@
 {% extends 'shared/site.html' %}
 
 {% block site_content %}
-    <form action="{% url 'sign in' %}" method="post">
+    <form action="{% url 'sign up' %}" method="post">
         {% csrf_token %}
         {{ form }}
-        <button>Sign in</button>
+        <button>Sign up</button>
     </form>
 {% endblock %}

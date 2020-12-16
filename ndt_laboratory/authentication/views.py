@@ -1,10 +1,13 @@
+from django.contrib.auth import forms as auth_forms
 from django.urls import reverse_lazy
 from django.views import generic as views
 from django.contrib.auth import views as auth_views
 
 
 class SignUpView(views.CreateView):
-    pass
+    template_name = 'auth/signup.html'
+    form_class = auth_forms.UserCreationForm
+    success_url = reverse_lazy('index')
 
 
 class SignInView(auth_views.LoginView):
