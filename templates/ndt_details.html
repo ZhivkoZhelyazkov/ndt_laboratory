@@ -2,25 +2,26 @@
 {% load static %}
 
 {% block styles %}
-    <link  rel="stylesheet" href="{% static 'css/details-test.css' %}">
+    <link rel="stylesheet" href="{% static 'css/details-test.css' %}">
 {% endblock %}
 
-{% block site_content%}
-    <div class="test-image">
-        <img src="{{ ndt.image.url }}" alt="image of {{ ndt.name }}">
-    </div>
-    <div class="test-info">
-        <ul class="list-test-details list-horizontal">
-            <li class="list-item"><span class="underline">Test:</span> {{ ndt.name }}</li>
-            <li class="list-item"><span class="underline">Standard:</span> {{ ndt.standard }}</li>
-            <li class="list-item"><span class="underline">Description:</span> {{ ndt.description }}</li>
-        </ul>
-        <p></p>
+{% block site_content %}
 
-{#        <div class="test-buttons">#}
-            {#    <a class="button button-blue" href="{% url 'order ndt' ndt.id %}">Order</a>#}
-{#            <a href="{% url 'order ndt' ndt.id %}"><i class="far fa-heart"></i></a>#}
-{#        </div>#}
-{#        Ordered: {{ ndt.order_set.count }}#}
+    <div class="ndt-details">
+        <div class="test-image">
+            <img src="{{ ndt.image.url }}" alt="image of {{ ndt.name }}">
+        </div>
+        <div class="test-info">
+            <ul class="list-test-details">
+                <li class="list-item"><span class="underline">NDT Method:</span> {{ ndt.name }}</li>
+                <li class="list-item"><span class="underline">Standard:</span> {{ ndt.standard }}</li>
+                <li class="list-item"><span class="underline">Description:</span> {{ ndt.description }}</li>
+            </ul>
+            <div>
+                <a href="{% url 'edit ndt' ndt.pk %}" class="btn btn-success">Edit</a>
+                <a href="{% url 'delete ndt' ndt.pk %}" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
     </div>
+
 {% endblock %}

@@ -146,3 +146,4 @@ MEDIA_ROOT = join(BASE_DIR, 'media')
 
 
 LOGIN_REDIRECT_URL = reverse_lazy('index')
+LOGIN_URL = reverse_lazy('sign in')

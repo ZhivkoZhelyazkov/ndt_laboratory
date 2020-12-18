@@ -9,6 +9,7 @@ class Profile(models.Model):
     user = models.OneToOneField(UserModel, on_delete=models.CASCADE)
 
 
+
 # from django.contrib.auth.models import User
 # from django.db import models
 #

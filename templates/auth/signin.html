@@ -4,6 +4,7 @@
     <form action="{% url 'sign in' %}" method="post">
         {% csrf_token %}
         {{ form }}
-        <button>Sign in</button>
+        <button class="btn btn-success">Sign in</button>
+        or <a href="{% url 'sign up' %}">Sign up</a>
     </form>
 {% endblock %}

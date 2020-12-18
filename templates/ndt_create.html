@@ -6,15 +6,15 @@
 {% endblock %}
 
 {% block site_title %}
-    Add a Non-destructive Test
+    Add a Non-Destructive Test Method
 {% endblock %}
 
 {% block site_content %}
 
-        <form action="" method="post">
+        <form action="{% url 'create ndt' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form }}
-            <button>Create</button>
+            <button class="btn btn-success" type="submit">Create</button>
         </form>
 
 {#    <div class="test-image">#}
