@@ -6,12 +6,14 @@
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
             <form method="post" action="{% url 'edit ndt' ndt.pk %}" enctype="multipart/form-data"
-                {{ form }}
-                {% csrf_token %}
-                <img id="img_preview" src="{{ ndt.image.url }}" class="w-50 rounded mx-auto d-block"/>
-                <button class="btn btn-primary mt-2" type="submit">Edit</button>
+            {{ form }}
+            {% csrf_token %}
+            <img id="img_preview" src="{{ ndt.image.url }}" class="w-50 rounded mx-auto d-block"/>
+            <button class="btn btn-primary mt-2 btn-success" type="submit">Edit</button>
+            <button class="btn btn-primary mt-2" href="javascript:history.back()">No, go back</button>
             </form>
         </div>
+
         <div class="col-lg-3"></div>
     </div>
     <script>
@@ -20,6 +22,7 @@
             let url = this.value;
             img.src = url;
         }
+
         document.getElementById('img_input').addEventListener('input', updateImage);
     </script>
 {% endblock %}
