@@ -7,16 +7,16 @@
 
 
 {% block site_content %}
-    <h1>All Non-Destructive Tests Methods</h1>
+    <h1>Catalogue of Non-Destructive Tests Methods of Building Materials</h1>
     <ul class="list-horizontal list-tests">
         {% for ndt in ndt_list %}
             <li class="list-item">
                 <img src="{{ ndt.image.url }}" alt="image of {{ ndt.name }}"/>
                 <div class="test-details">
-                    <p class="test-info">{{ ndt.name }} {{ ndt.standard }}</p>
+                    <p class="test-info">{{ ndt.name }}</p>
                     <p class="test-description">{{ ndt.description }}</p>
                     <div class="test-buttons">
-                        <a class="button button-blue" href="{% url 'ndt details' ndt.id ndt.slug %}">{{ ndt.name }}</a>
+                        <a class="button button-blue" href="{% url 'ndt details' ndt.id ndt.slug %}">Details</a>
                     </div>
                 </div>
             </li>

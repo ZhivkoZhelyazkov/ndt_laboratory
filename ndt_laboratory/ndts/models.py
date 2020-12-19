@@ -17,9 +17,10 @@ class Ndt(models.Model):
 
     slug = models.SlugField(editable=False)
     type = models.CharField(max_length=8, choices=NDT_TYPES, default=UNKNOWN)
-    name = models.CharField(max_length=20, blank=False)
-    standard = models.CharField(max_length=20, blank=False)
+    name = models.CharField(max_length=40, blank=False)
     description = models.TextField(blank=False)
+    standard = models.CharField(max_length=20, blank=False)
+    title = models.TextField(blank=False)
     image = models.ImageField(
         upload_to='ndts',
     )
@@ -34,13 +35,21 @@ class Ndt(models.Model):
         return f'{self.id}; {self.type}; {self.name}; {self.standard}'
 
 
-class Choose(models.Model):
-    ndt = models.ForeignKey(Ndt, on_delete=models.CASCADE)
-    text = models.CharField(max_length=2)
-    user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
 
 
-class Comment(models.Model):
-    ndt = models.ForeignKey(Ndt, on_delete=models.CASCADE)
-    text = models.TextField(blank=False)
-    user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
+
+
+
+
+
+
+# class Choose(models.Model):
+#     ndt = models.ForeignKey(Ndt, on_delete=models.CASCADE)
+#     text = models.CharField(max_length=2)
+#     user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
+#
+#
+# class Comment(models.Model):
+#     ndt = models.ForeignKey(Ndt, on_delete=models.CASCADE)
+#     text = models.TextField(blank=False)
+#     user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
