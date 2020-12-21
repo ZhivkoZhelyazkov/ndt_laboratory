@@ -19,6 +19,13 @@ class NdtDetailsView(views.DetailView):
     template_name = 'ndt_details.html'
     model = Ndt
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        ndt = self.get_object()
+        context['can_delete'] = self.request.user == ndt.user
+        context['can_edit'] = self.request.user == ndt.user
+        return context
+
 
 class CreateNdtView(auth_mixins.LoginRequiredMixin, views.CreateView):
     template_name = 'ndt_create.html'

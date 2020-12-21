@@ -17,21 +17,14 @@
             <button class="btn btn-success" type="submit">Create</button>
         </form>
 
-{#    <div class="test-image">#}
-{#        <img src="{{ ndt.image }}" alt="image of {{ ndt.name }}">#}
-{#    </div>#}
-{#    <div class="test-info">#}
-{#        <ul class="list-test-details list-horizontal">#}
-{#            <li class="list-item"><span class="underline">Test:</span> {{ ndt.name }}</li>#}
-{#            <li class="list-item"><span class="underline">Standard:</span> {{ ndt.standard }}</li>#}
-{#        </ul>#}
-{#        <p>Description: {{ ndt.description }}</p>#}
-{##}
+{% endblock %}
+
+
+
+
 {#        <div class="test-buttons">#}
             {#    <a class="button button-blue" href="{% url 'order test' test.id %}">Order</a>#}
 {#            <a href="{% url 'order test' test.id %}"><i class="far fa-heart"></i></a>#}
 {#        </div>#}
 {#        Ordered: {{ test.order_set.count }}#}
 {#    </div>#}
-
-{% endblock %}

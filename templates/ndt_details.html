@@ -21,8 +21,12 @@
                 <li class="list-item"><span class="underline">Added by:</span> {{ ndt.user }}</li>
             </ul>
             <div>
-                <a href="{% url 'edit ndt' ndt.pk %}" class="btn btn-success">Edit</a>
-                <a href="{% url 'delete ndt' ndt.pk %}" class="btn btn-danger">Delete</a>
+                {% if can_edit %}
+                    <a href="{% url 'edit ndt' ndt.pk %}" class="btn btn-success">Edit</a>
+                {% endif %}
+                {% if can_delete %}
+                    <a href="{% url 'delete ndt' ndt.pk %}" class="btn btn-danger">Delete</a>
+                {% endif %}
             </div>
         </div>
     </div>
