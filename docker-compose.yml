@@ -1,0 +1,7 @@
+version: '3'
+services:
+  app:
+    image: zhivko/ndt_lab
+    build: .
+    ports:
+      - "8000:8000"

@@ -7,9 +7,7 @@
                 <div class="m-2">
                     <form method="post" action="{% url 'delete ndt' ndt.pk %}">
                         {% csrf_token %}
-                        <button class="btn btn-danger">
-                            Confirm
-                        </button>
+                        <button class="btn btn-danger">Confirm</button>
                     </form>
                 </div>
                 <div class="m-2">
